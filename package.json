@@ -1,28 +1,28 @@
 {
-	"author": "",
-	"bugs":
-	{
-		"url": "https://github.com/eglital/assignment_node_hello_world/issues"
-	},
-	"description": "assignment_node_hello_world ===========================",
-	"folders":
-	[
-		{
-			"path": "/Users/egle/Code/assignment_node_hello_world"
-		}
-	],
-	"homepage": "https://github.com/eglital/assignment_node_hello_world#readme",
-	"license": "ISC",
-	"main": "index.js",
-	"name": "hello_world",
-	"repository":
-	{
-		"type": "git",
-		"url": "git+https://github.com/eglital/assignment_node_hello_world.git"
-	},
-	"scripts":
-	{
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"version": "1.0.0"
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/eglital/assignment_node_hello_world/issues"
+  },
+  "description": "assignment_node_hello_world ===========================",
+  "folders": [
+    {
+      "path": "/Users/egle/Code/assignment_node_hello_world"
+    }
+  ],
+  "homepage": "https://github.com/eglital/assignment_node_hello_world#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "hello_world",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eglital/assignment_node_hello_world.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "lodash": "^4.17.4"
+  }
 }
