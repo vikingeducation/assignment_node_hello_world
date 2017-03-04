@@ -1,0 +1,23 @@
+{
+  "name": "assignment_node_hello_world",
+  "version": "1.0.0",
+  "description": "first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnAllan/assignment_node_hello_world.git"
+  },
+  "author": "Ann Allan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnAllan/assignment_node_hello_world/issues"
+  },
+  "homepage": "https://github.com/AnnAllan/assignment_node_hello_world#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "lodash": "^4.17.4"
+  }
+}
