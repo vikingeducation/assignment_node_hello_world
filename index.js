@@ -1,6 +1,7 @@
 var chalk = require('chalk');
 var _ = require('lodash');
+var logger = require('./lib/logger');
 
-
-var testArray = [0, 1, 2, 3]
-console.log(_.each(testArray));
+logger.log("Info", "INFO");
+logger.log("Warning", "WARNING");
+logger.log("Error", "ERROR");
