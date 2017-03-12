@@ -1,7 +1,7 @@
-var chalk = require('chalk');
 var _ = require('lodash');
 var logger = require('./lib/logger');
+var json = require('./data/logs');
 
-logger.log("Info", "INFO");
-logger.log("Warning", "WARNING");
-logger.log("Error", "ERROR");
+_.each(json, function(obj) {
+  logger.log(obj.level, obj.message);
+});
