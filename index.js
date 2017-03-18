@@ -1,9 +1,8 @@
-var chalk = require('chalk');
+
 var _ = require('lodash');
+var Logger = require('./lib/logger.js');
 
-console.log(chalk.blue('hello world'));
+Logger.dispatch('this is a string', 'info');
+Logger.dispatch('this is a string', 'warning');
+Logger.dispatch('this is a string', 'error');
 
-var myArray = [1,2,3,4,5,6];
-_.each(myArray, function(i){
-  console.log(chalk.green(i));
-})
