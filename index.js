@@ -1,10 +1,12 @@
 var chalk = require('chalk');
 var _ = require('lodash');
 
-console.log(chalk.red('hello, world'));
+var logger = require('./lib/logger.js');
 
-var arr = [1,2,3,4,5];
+logger.info('blue');
+logger.warning('yellow');
+logger.error('red');
 
-_.each(arr, function(num) {
-  console.log(chalk.yellow(num));
-})
+
+
+
