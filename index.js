@@ -2,12 +2,12 @@ var chalk = require('chalk');
 var _ = require('lodash');
 var logger = require('./lib/logger.js');
 
-console.log(chalk.blue("hello world"));
+var json = require('./data/logs.json')
 
-_.each([1,2,3], function(num) {
-  console.log(chalk.blue(num));
+
+
+
+
+_.each(json, function(data) {
+  logger(data.message, data.level)
 });
-
-logger("hello there", "info");
-logger("oh boy", "warning");
-logger("shit shit shit", "error")
