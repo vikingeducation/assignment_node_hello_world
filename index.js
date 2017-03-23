@@ -1,11 +1,8 @@
 var _ = require('lodash');
-var chalk = require('chalk');
+chalk = require('chalk');
+var Logger = require('./lib/logger');
 
-
-console.log(chalk.bgBlue.white.bold("Hello world!"));	
-
-
-arr = ["dog", "cat", "bear", "wolf", "penguin"];
-_.each(arr, function(el) {
-	console.log(el);
-});
+var logger = new Logger;
+logger.log("Message logged at INFO level", "INFO");
+logger.log("Message logged at WARNING level", "WARNING");
+logger.log("Message logged at ERROR level", "ERROR");
