@@ -1,7 +1,29 @@
 var _ = require('lodash');
 var chalk = require('chalk');
-var error = chalk.bold.red;
+var myLoggerMessage = require('./lib/logger');
+var myLogs = require('./data/logs');
 
+_.each(myLogs, function(value){
+  myLoggerMessage.log(value["message"], value["level"]);
+});
+
+
+
+
+/*var msg1 = "Information message",
+    msg2 = "Warning message",
+    msg3 = "Error message";
+
+var level1 = "info",
+    level2 = "warning",
+    level3 = "error";*/
+
+/*myLoggerMessage.log(msg1,level1);
+myLoggerMessage.log(msg2,level2);
+myLoggerMessage.log(msg3,level3);*/
+
+
+/*
 // testing Lodash
 var testArray = [1,2,3,4,5,6];
 _.each(testArray, function(value) {
@@ -9,27 +31,5 @@ _.each(testArray, function(value) {
 });
 
 // testing Chalk
-console.log(error('Error!'));
-// style a string
-console.log(chalk.blue('Hello world!'));
-
-// combine styled and normal strings
-console.log(chalk.blue('Hello') + 'World' + chalk.red('!'));
-
-// compose multiple styles using the chainable API
-console.log(chalk.blue.bgRed.bold('Hello world!'));
-
-// pass in multiple arguments
-console.log(chalk.blue('Hello', 'World!', 'Foo', 'bar', 'biz', 'baz'));
-
-// nest styles
-console.log(chalk.red('Hello', chalk.underline.bgBlue('world') + '!'));
-
-// nest styles of the same type even (color, underline, background)
-console.log(chalk.green(
-    'I am a green line ' +
-    chalk.blue.underline.bold('with a blue substring') +
-    ' that becomes green again!'
-));
-
-//console.log("Jay Swaminarayan");
+console.log(chalk.bold.red('Error!'));
+*/
