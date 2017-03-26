@@ -1,10 +1,8 @@
-const chalk = require('chalk');
 const _ = require('lodash');
+const logger = require('./lib/logger');
 
-console.log(chalk.blue('Hello world!'));
+let messageLevel = ['info', 'warning', 'error'];
 
-let arr = [1, 3, 5, 7, 9, 11];
-
-_.each(arr, (value) => {
-    console.log(value);
+_.each(messageLevel, (level) => {
+    logger.log(`Message logged at ${level.toUpperCase()} level`, level);
 });
