@@ -1,0 +1,23 @@
+{
+  "name": "assignment_node_hello_world",
+  "version": "1.0.0",
+  "description": "Viking Code School Node Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabGIT/assignment_node_hello_world.git"
+  },
+  "author": "Richard Bell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rabGIT/assignment_node_hello_world/issues"
+  },
+  "homepage": "https://github.com/rabGIT/assignment_node_hello_world#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "lodash": "^4.17.4"
+  }
+}
