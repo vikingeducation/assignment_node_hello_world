@@ -1,11 +1,9 @@
 var chalk = require('chalk');
-var _ = require('lodash');
+var logger = require('./lib/logger.js');
 
-var arr = [1,2,3,4,5];
+logger.log('milk', 'INFO');
+logger.log('eggs', 'WARNING');
+logger.log('bread', 'ERROR');
 
-_.forEach(arr, (item) => {
-  console.log( chalk.yellow(item) );
-});
 
-console.log( chalk.blue('Hello World!') );
 
