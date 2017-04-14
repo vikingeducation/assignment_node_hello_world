@@ -10,6 +10,6 @@ _.each(countries, function(country) {
   console.log(country);
 });
 
-logger.log("Message logged at INFO level", "INFO");
-logger.log("Message logged at WARNING level", "WARNING");
-logger.log("Message logged at ERROR level", "ERROR");
+logger.log("Message logged at INFO level", "info");
+logger.log("Message logged at WARNING level", "warning");
+logger.log("Message logged at ERROR level", "error");
