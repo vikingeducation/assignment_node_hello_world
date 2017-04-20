@@ -1,10 +1,11 @@
 var chlk = require('chalk');
 var _= require('lodash');
-var jsn = require('./data/logs')
+var jsn = require('./data/logs');
+var logger = require('./lib/logger.js');
+
 
 _.forEach(jsn,function(jsn){
-  console.log(chlk.green(jsn.level));
-  console.log(chlk.blue(jsn.message));
+  logger.log(jsn.message,jsn.level);
 });
 
 console.log("Hello World!");
