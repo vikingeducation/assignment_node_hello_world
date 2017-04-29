@@ -1,7 +1,8 @@
 var chalk = require('chalk');
 var _ = require('lodash');
 var logger = require('./lib/logger');
+var logs = require('./data/logs');
 
-logger.info("Message logged at INFO level");
-logger.warning("Message logged at WARNING level");
-logger.error("Message logged at ERROR level");
+_.each(logs, function(object) {
+  logger.log(object.message, object.level.toUpperCase());
+});
