@@ -1,8 +1,7 @@
 var chalk = require('chalk');
 var _ = require('lodash');
+var logger = require('./lib/logger');
 
-var testArray = ["Tyler", "Mattie", "Cora", "Katie", "Carl"];
-console.log(chalk.blue('Hello world!'));
-_.each(testArray, function(name) {
-  console.log(chalk.red(name));
-});
+logger.info("Message logged at INFO level");
+logger.warning("Message logged at WARNING level");
+logger.error("Message logged at ERROR level");
