@@ -1,6 +1,6 @@
-// const chalk = require('chalk');
-// const _ = require('lodash');
+const _ = require('lodash');
 const logger = require('./lib/logger');
+const logs = require('./data/logs');
 
 // console.log(chalk.blue('Hello world!'));
 
@@ -8,6 +8,8 @@ const logger = require('./lib/logger');
 
 // _.each(arr, value => console.log(value));
 
-logger.info('Info level');
-logger.warning('Warning');
-logger.error('Error');
+// logger.info('Info level');
+// logger.warning('Warning');
+// logger.error('Error');
+
+_.each(logs, entry => logger.log(entry.message, entry.level));
