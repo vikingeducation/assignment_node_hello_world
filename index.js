@@ -3,11 +3,15 @@ var array = require('lodash/array');
 var chalk = require('chalk');
 var logger = require('./lib/logger');
 var salutations = "hey you";
+var json = require('./data/logs');
 console.log(chalk.blue('Hello world!'));
 lodash.each();
-for(var i = 0; i < 5; i++) {
-    console.log(i);
-}
-logger.log(salutations,0);
-logger.log(salutations,2);
-logger.log(salutations,1);
+
+logger.log(salutations,"INFO");
+logger.log(salutations,"ERROR");
+logger.log(salutations,"WARNING");
+console.log(json.length);
+console.log(json.length);
+  for(var i = 0; i < json.length; i++) {
+      logger.log(json[i].message,json[i].level);
+  }
