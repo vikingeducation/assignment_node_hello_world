@@ -1,4 +1,5 @@
 'use strict';
 
-let chalk = require('chalk');
 let _ = require('lodash');
+let logger = require('./lib/logger.js');
+
