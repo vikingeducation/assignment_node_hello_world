@@ -1,7 +1,10 @@
+var logger = require("./lib/logger");
 var chalk = require('chalk');
 var _ = require('lodash');
+var json = require("./data/logs.json");
 
-console.log(chalk.red("Red text ayy"));
-console.log(chalk.blue("Blue text ayy"));
+_.each(json, function(data){
+	logger.log(data.message, data.level);
+})
 
-_.each([1,2,3], function(x){ console.log(x*2)}).join(" | ");
+
