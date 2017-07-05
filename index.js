@@ -11,8 +11,12 @@ log(chalk.blue("The smurfs are coming") + "..." + chalk.red("BEWARE!"));
 
 var logger = require('./lib/logger');
 
-log("hello");
-logger.info("hello matez");
-logger.log("Hello World!", "INFO");
-logger.log("You may have forgotten an s in this line\n'module.export = logger;'", "WARNING");
-logger.log("Program received signal SIGBUS, Bus error", "ERROR");
+logger.log("INFO", "Hello World!" );
+logger.log("WARNING", "You may have forgotten an s in this line\n'module.export = logger;'");
+logger.log("ERROR", "Program received signal SIGBUS, Bus error");
+
+//using a json file
+var data = require('./data/logs');
+_.each( data, function(value){
+  logger.log(value.level, value.message);
+});
