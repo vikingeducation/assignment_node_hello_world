@@ -1,8 +1,11 @@
-const chalk = require("chalk");
 const _ = require("lodash");
- 
-console.log(chalk.blue("Hello world!"));
+const logger = require("./lib/logger");
+const logs = require("./data/logs")
 
-_.each([1, 2, 3], function(number) {
-	console.log(number);
+logger.log("This is getting logged!!!!!", "INFO");
+logger.log("This is getting logged!!!!!", "WARNING");
+logger.log("This is getting logged!!!!!", "ERROR");
+
+_.each(logs, function(log) {
+	logger.log(log.message, log.level);
 });
