@@ -1,14 +1,10 @@
 var _ = require('lodash');
-var chalk = require('chalk');
+
+var logger = require('./lib/logger');
 
 
 
-
-
-console.log(chalk.bgBlue('hello world'));
-
-var myArray = ['hello', 'good bye'];
-
-_.each(myArray, function(word){
-	console.log(word);
-});
+logger.log('this is how we do!', 'warning');
+logger.info("how do we do?");
+logger.warning('this is how we do!');
+logger.error('wait, I did not get all that.');
