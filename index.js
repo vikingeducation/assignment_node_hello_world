@@ -1,12 +1,11 @@
 var logger = require('./lib/logger');
+var logs = require('./data/logs');
+var _ = require('lodash');
+
+
+_.each(logs, function(x) {
+	var message = logger.log(x.message, x.level);
+});
 
 
 
-
-
-
-
-logger.log('Hello world!');
-logger.info('Hello world!');
-logger.warning('Hello world!');
-logger.error('Hello world!');
