@@ -1,4 +1,12 @@
-var chalk = require('chalk');
-var _ = require('lodash');
+var logger = require('./lib/logger');
 
-console.log(chalk.red('Hello world!'));
+
+
+
+
+
+
+logger.log('Hello world!');
+logger.info('Hello world!');
+logger.warning('Hello world!');
+logger.error('Hello world!');
