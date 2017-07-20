@@ -1,15 +1,7 @@
-const chalk = require('chalk');
-const lodash = require('lodash');
 const logger = require('./lib/logger.js');
 const json = require('./data/logs.json');
+const lodash = require('lodash');
 
-console.log(chalk.red('Hello world!'));
-
-lodash._.each([1, 2], function(value) {
-  console.log(value);
-});
-
-logger.info("hello");
 
 lodash._.each(json, function(value) {
 	switch(value.level){
