@@ -1,6 +1,7 @@
 var chalk = require('chalk');
 var _ = require('lodash');
 var logger = require('./lib/logger');
+var json = require('./data/logs');
 
 console.log(chalk.red('Hello ')+ chalk.blue('World!'));
 
@@ -11,6 +12,11 @@ _.each(arr, function(arr) {
 });
 
 
-logger.info('Info level log');
-logger.warning('Warning level log');
-logger.error('Error level log');
+logger.info('INFO level log');
+logger.warning('WARNING level log');
+logger.error('ERROR level log');
+
+_.each(json, function(obj) {
+	logger.log(obj.message, obj.level)
+
+});
