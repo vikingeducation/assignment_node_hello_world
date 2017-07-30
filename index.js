@@ -6,5 +6,5 @@ var logger = require('./lib/logger');
 
 
 _.each(data, function(item){
-	logger.log(item.level + ' : ' + item.message);
+	logger.log(item.message, item.level);
 });
