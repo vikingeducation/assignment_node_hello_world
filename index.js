@@ -1,11 +1,6 @@
-var chalk = require('chalk');
-var _ = require('lodash');
+var logger = require('./lib/logger');
 
-console.log(chalk.blue("Chalk is working!"));
-
-var numbers = [1, 2, 3];
-
-_.each(numbers, function(num) {
-	console.log("Next number is " + num);
-});
-
+logger.log('a blue info message', 'info');
+logger.log('a yellow warning message', 'warning');
+logger.log('a red error message', 'error');
+logger.log('bad logging level', 'bad');
