@@ -1,0 +1,27 @@
+{
+  "name": "assignment_node_hello_world",
+  "version": "1.0.0",
+  "description": "Bulid a logger to log messages at levels info, warning, and error",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('buena!');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lortza/assignment_node_hello_world.git"
+  },
+  "keywords": [
+    "viking",
+    "node"
+  ],
+  "author": "anne richardson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lortza/assignment_node_hello_world/issues"
+  },
+  "homepage": "https://github.com/lortza/assignment_node_hello_world#readme",
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "lodash": "^4.17.4"
+  }
+}
