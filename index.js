@@ -2,6 +2,11 @@ var _ = require('lodash');
 var logger = require('./lib/logger');
 
 
+logger.log("Here's some info", logger.info);
+logger.log("Yikes... a warning", logger.warning);
+logger.log("Holy cow! You've got an error!", logger.error);
+
+
 // ----------SAMPLE CHALK USAGE------------
 // const error = chalk.bold.red;
 // const warning = chalk.keyword('orange');
