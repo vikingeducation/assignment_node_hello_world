@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/lortza/assignment_node_hello_world/issues"
   },
-  "homepage": "https://github.com/lortza/assignment_node_hello_world#readme"
+  "homepage": "https://github.com/lortza/assignment_node_hello_world#readme",
+  "dependencies": {
+    "chalk": "^2.0.1"
+  }
 }
