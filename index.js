@@ -1,7 +1,11 @@
 var chalk = require("chalk");
 var _ = require("lodash");
+var logger = require("./lib/logger");
 
-console.log(chalk.yellow.bgCyan("Oh heyyyyyyyyy"));
-_.forEach([12, 19, 1988], function(value) {
-  console.log(value);
-});
+logger.log("This is a string", "INFO");
+logger.log("This is a warning", "WARNING");
+logger.log("This is an error", "ERROR");
+
+logger.error("This is an error");
+logger.info("This is some info");
+logger.warning("this is a warning");
