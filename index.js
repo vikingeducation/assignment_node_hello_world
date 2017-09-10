@@ -1,9 +1,12 @@
-var chalk = require('chalk');
 var _ = require('lodash');
+var logger = require('./lib/logger.js');
 
 
-console.log(chalk.blue('hello world'));
 
-_.each([1, 2, 3], function(el) {
-  console.log(el);
-})
+var infoMsg = "Logging message at INFO level";
+var warningMsg = "Logging message at WARNING level";
+var errorMsg = "Logging message at ERROR level";
+
+logger.log(infoMsg, 'info');
+logger.log(warningMsg, 'warning');
+logger.log(errorMsg, 'error');
