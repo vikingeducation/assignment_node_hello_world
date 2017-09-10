@@ -18,6 +18,10 @@ console.log(chalk.blue('hello world!'));
 
 var teams = require('./lib/favoriteTeams');
 var logger = require('./lib/logger');
+var infoV = require('./lib/logger');
+var warningV = require('./lib/logger');
+var errorV = require('./lib/logger');
+
 
 console.log(teams);
 console.log();
@@ -25,3 +29,5 @@ console.log();
 _.each(teams, function(teams) {
   logger.log(teams);
 });
+
+console.log(chalk.blue('infoV'))
