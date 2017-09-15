@@ -1,7 +1,25 @@
 const chalk = require('chalk');
+var _ = require('lodash'); // Load the full build of lodash
 
-// Load the full build of lodash
-var _ = require('lodash');
+var logger = require('./lib/logger.js');
+var logs = require('./data/logs.json');
+
+//quick test on message + levels
+logger.log('fyi', 'info');
+logger.log('Warning, warning', 'warning');
+logger.log('ERROR! ERROR! ERROR!', 'error');
+
+console.log('=================================');
+
+// iterate over json file
+_.forEach(logs,function(logItem) {
+	logger.log(logItem.message, logItem.level);
+});
+
+/**********************************************************
+//
+// sample lodash code
+//
 
 // merge objects
 console.log(
@@ -25,7 +43,9 @@ _.forEach([1, 2], function(value) {
 });
 // => Logs `1` then `2`.
 
-//////////////////////////////////
+//
+// sample chalk code
+//
 
 const log = console.log;
  
@@ -34,6 +54,9 @@ log(chalk.blue('Hello') + 'World' + chalk.red('!'));
  
 // Compose multiple styles using the chainable API 
 log(chalk.blue.bgRed.bold('Hello world!'));
+
+//DC test
+console.log(chalk.green.bgYellow.bold('DC: Hello world!'));
  
 // Pass in multiple arguments 
 log(chalk.blue('Hello', 'World!', 'Foo', 'bar', 'biz', 'baz'));
@@ -48,34 +71,19 @@ log(chalk.green(
     ' that becomes green again!'
 ));
  
-/*
-// ES2015 template literal 
-log(`
-CPU: ${chalk.red('90%')}
-RAM: ${chalk.green('40%')}
-DISK: ${chalk.yellow('70%')}
-`);
- 
-// ES2015 tagged template literal 
-log(chalk`
-CPU: {red ${cpu.totalPercent}%}
-RAM: {green ${ram.used / ram.total * 100}%}
-DISK: {rgb(255,131,0) ${disk.used / disk.total * 100}%}
-`);
-*/
- 
 // Use RGB colors in terminal emulators that support it. 
 log(chalk.keyword('orange')('Yay for orange colored text!'));
 log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
 log(chalk.hex('#DEADED').bold('Bold gray!'));
-
  
 const error = chalk.bold.red;
-const warning = chalk.keyword('orange');
+//const warning = chalk.keyword('orange');
+const warning = chalk.bold.yellow;
  
 console.log(error('Error!'));
 console.log(warning('Warning!'));
+//console.log(chalk.yellow('Warning!'));
 
-const name = 'Dennis';
+const name = 'DC';
 console.log(chalk.green('Hello %s'), name);
-//=> 'Hello Dennis' 
+**********************************************************/
