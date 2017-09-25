@@ -6,6 +6,6 @@ logger.log('Message logged at INFO level', 'iNfO');
 logger.log('Message logged at WARNING level', 'WaRnIng');
 logger.log('Message logged at ERROR level', 'erRoR');
 
-_.forEach(messages, function(message) {
+_.each(messages, function(message) {
   logger.log(message.message, message.level);
 });
