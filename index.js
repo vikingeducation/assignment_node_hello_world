@@ -1,5 +1,6 @@
 var _ = require('lodash');
 const chalk = require('chalk');
+var logs = require('./data/logs');
 
 var log = require('./lib/logger');
 log('This is error message', 'ERROR');
@@ -13,3 +14,7 @@ log('This is info message', 'INFO');
 // _.each(arr, function(element) {
 //   console.log(element);
 // });
+// console.log(logs[0]);
+_.each(logs, function(element) {
+  log(element.message, element.level);
+});
