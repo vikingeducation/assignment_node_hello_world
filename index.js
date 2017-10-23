@@ -7,14 +7,19 @@ log('This is error message', 'ERROR');
 log('This is warning message', 'WARNING');
 log('This is info message', 'INFO');
 
-// console.log(chalk.blue('Hello World!'));
-//
-// var arr = [1,2,3,4];
-//
-// _.each(arr, function(element) {
-//   console.log(element);
-// });
-// console.log(logs[0]);
+var info = function(message) {
+  console.log(message, 'info');
+}
+
+var warning = function(message) {
+  console.log(message, 'warning');
+}
+
+var error = function(message) {
+  console.log(message, 'error');
+}
+
 _.each(logs, function(element) {
+  debugger;
   log(element.message, element.level);
 });
