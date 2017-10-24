@@ -1,6 +1,7 @@
 var _ = require('lodash');
 const chalk = require('chalk');
-var logger = require('./lib/logger')
+var logger = require('./lib/logger');
+var messages = require('./data/logs.json');
 
 //chalk works
 console.log(chalk.green(
@@ -17,4 +18,12 @@ _.each (array, function(n) {
 })
 
 
-logger.log('Messaged logged at ERROR level','ERROR');
+// testing the logger
+logger.log('Messaged logged at ERROR level','error');
+
+
+// logging from JSON
+_.each (messages, function(value) {
+  logger.log(value.message, value.level);
+
+});
