@@ -1,9 +1,9 @@
-const _ = require('lodash');
-const chalk = require('chalk');
+'use strict';
 
-console.log(chalk.blue('Hello World!'));
-console.log(chalk.bgRed(chalk.gray('Happy Halloween')));
+let _ = require('lodash');
+let chalk = require('chalk');
+let logger = require('./lib/logger.js');
 
-_.each([1, 2, 3], function(x) {
-  console.log(x * 2);
-});
+logger.log('INFO level message', 'info');
+logger.log('WARNING level message', 'warning');
+logger.log('ERROR level message', 'error');
