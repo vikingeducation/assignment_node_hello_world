@@ -1,9 +1,8 @@
 const chalk = require('chalk');
 const _ = require('lodash');
-console.log(chalk.blue("Hello world!"));
+let myPack = require('./lib/logger.js');
+let neededJson = require('./data/logs.json');
 
-let arrayVar = ["hum", "dinger", "squeezy", "frolf"];
-
-_.each(arrayVar, function(value){
-	console.log(chalk.red(value));
+_.each(neededJson, function(item){
+	myPack.log(item.message, item.level);
 });
