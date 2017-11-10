@@ -12,7 +12,7 @@ _.each([1,2,3], function(el, idx) {
 
 console.log("hello world");
 
-console.log(logger.log("This should be blue", "INFO"));
-console.log(logger.log("This should be yellow", "WARNING"));
-console.log(logger.log("This should be red", "ERROR"));
+logger.log("This should be blue", "INFO");
+logger.log("This should be yellow", "WARNING");
+logger.log("This should be red", "ERROR");
 
