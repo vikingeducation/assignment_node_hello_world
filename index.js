@@ -1,6 +1,7 @@
 let _ = require('lodash');
 let chalk = require('chalk');
 let Logger = require('./lib/logger');
+let json = require('./data/logs');
 
 let logger = new Logger();
 
@@ -16,3 +17,6 @@ logger.log("This should be blue", "INFO");
 logger.log("This should be yellow", "WARNING");
 logger.log("This should be red", "ERROR");
 
+_.each(json, function(obj, idx) {
+  logger.log(obj.message, obj.level);
+});
