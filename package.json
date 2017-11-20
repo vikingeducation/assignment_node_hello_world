@@ -1,0 +1,24 @@
+{
+  "name": "demo_node_hello_world",
+  "version": "1.0.0",
+  "description": "demo_node_js_assignment",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sarah",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahSchoonmaker/assignment_node_hello_world.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SarahSchoonmaker/assignment_node_hello_world/issues"
+  },
+  "homepage": "https://github.com/SarahSchoonmaker/assignment_node_hello_world#readme"
+}
