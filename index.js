@@ -2,14 +2,16 @@
 const _ = require('lodash');
 
 // Require logger
-const logger = require('./lib/logger');
+const LOGGER = require('./lib/logger');
 
 // Require logs
-const logs = require('./data/logs'); 
+const LOGS = require('./data/logs'); 
 
-// Log all messages in logs
-_.each( logs, log => {
-  logger.log( log.message, log.level );
+// Iterate though messages in logs.json 
+_.each( LOGS, log => {
+  // Call appropriate method based on the level
+  // and pass in the message
+  LOGGER[log.level]( log.message );
 });
 
 
