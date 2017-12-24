@@ -1,14 +1,15 @@
-const chalk = require('chalk');
+// Require lodash
 const _ = require('lodash');
 
-const testArray = [
-  'first',
-  'second',
-  'third'
-];
+// Require logger
+const logger = require('./lib/logger');
 
-console.log( chalk.green(`Hello World!`) );
+// Require logs
+const logs = require('./data/logs'); 
 
-_.each( testArray, value => {
-  console.log( value );
+// Log all messages in logs
+_.each( logs, log => {
+  logger.log( log.message, log.level );
 });
+
+
