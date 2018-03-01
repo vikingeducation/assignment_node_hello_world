@@ -1,8 +1,12 @@
 
+console.log("Hello World!");
+
 const chalk = require('chalk');
-console.log(chalk.blue('Hello world!'));
+console.log(chalk.red('I am chalk'));
 
-var lodash = require("lodash");
-console.log(lodash.name);
+var _ = require('lodash');
+console.log(_.name);
 
-console.log("Hello World");
+_.each([1, 2, 3], function(value) {
+  console.log(value);
+});
