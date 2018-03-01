@@ -1,0 +1,19 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "Node_Hello_World",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrennanFulmer/assignment_node_hello_world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrennanFulmer/assignment_node_hello_world/issues"
+  },
+  "homepage": "https://github.com/BrennanFulmer/assignment_node_hello_world#readme"
+}
