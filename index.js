@@ -8,6 +8,7 @@
 const chalk = require('chalk');
 var _ = require('lodash');
 var logger = require("./lib/logger");
+var jason = require("./data/logs");
 
 console.log("Hello World!");
 console.log(_.name);
@@ -18,5 +19,9 @@ _.each([1, 2, 3], function(value) {
 });
 
 logger.log("test", "info");
-logger.log("123", "warn");
+logger.log("123", "warning");
 logger.log("abc", "error");
+
+_.each(jason, function(value, index) {
+  logger.log(value.message, value.level);
+});
