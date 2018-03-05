@@ -16,6 +16,6 @@ logger.log("test", "info");
 logger.log("123", "warning");
 logger.log("abc", "error");
 
-_.each(record, function(value, index) {
+_.each(record, function(value) {
   logger.log(value.message, value.level);
 });
