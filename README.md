@@ -1,9 +1,6 @@
 assignment_node_hello_world
 ===========================
 
+By Brennan Fulmer
 
-Just Node.js saying hello to the world and such.
-
-
-
-
+In this assignment I learned the basics of Node and used Lodash and Chalk to display a series of error messages
