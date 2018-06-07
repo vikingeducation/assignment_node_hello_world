@@ -1,0 +1,22 @@
+{
+  "name": "assignment_node_hello_world",
+  "version": "1.0.0",
+  "description": "viking code school assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"test\");"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megantaylor/assignment_node_hello_world.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "megan taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megantaylor/assignment_node_hello_world/issues"
+  },
+  "homepage": "https://github.com/megantaylor/assignment_node_hello_world#readme"
+}
