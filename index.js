@@ -1,9 +1,6 @@
-const chalk = require("chalk");
 var _ = require("lodash");
+var logger = require("./lib/logger");
 
-console.log("Hello World!");
-console.log(chalk.blue('Hello world!'));
-
-_.forEach([1, 2], function(value) {
-  console.log(value);
-});
+logger.log("test", "info");
+logger.log("123", "warning");
+logger.log("abc", "error");
