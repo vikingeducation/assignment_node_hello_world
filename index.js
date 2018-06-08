@@ -1,6 +1,7 @@
 var _ = require("lodash");
 var logger = require("./lib/logger");
+var messages = require('./data/logs');
 
-logger.log("test", "info");
-logger.log("123", "warning");
-logger.log("abc", "error");
+_.each(messages, function(message){
+  logger.log(message.message, message.level)
+})
