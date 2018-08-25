@@ -1,5 +1,6 @@
 var _ = require("lodash");
 var chalk = require("chalk");
+var jsonLogs = require("./data/logs");
 
 console.log(chalk.blue("yay"));
 
@@ -24,3 +25,9 @@ console.log();
 logger.info("info");
 logger.warning("warning");
 logger.error("error");
+
+console.log("~~~~~");
+
+_.each(jsonLogs, function(jsonLog){
+  logger.log(jsonLog.message, jsonLog.level);
+})
