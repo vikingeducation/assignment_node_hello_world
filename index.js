@@ -1,6 +1,6 @@
 var _ = require("lodash");
 const chalk = require("chalk");
+var logger = require("./lib/logger");
+var logs = require("./data/logs");
 
-console.log(chalk.blue("Hello world!"));
-
-_([1, 2, 3]).each((num) => console.log(num));
+_(logs).each((entry) => logger.log(entry.message, entry.level));
